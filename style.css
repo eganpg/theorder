@@ -1,0 +1,35 @@
+body {
+	margin: 0;
+}
+header {
+	background: lightblue;
+	margin: 0px;
+	padding: 0px;
+	display: inline-block;
+	height: 100%;
+}
+li {
+	display: inline-block;
+}
+
+
+
+.headerRight, .headerLeft {
+	float: right;
+	height: 100%;
+	margin: 1%;
+}
+.form-inline {
+	float:right;
+}
+
+.searchHolder {
+	background: url('fun_2.jpg');
+	height: 100px;
+	padding: 10%;
+}
+
+.productFinder {
+	height: 100px;
+	width: 400px;
+}

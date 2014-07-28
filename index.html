@@ -1,0 +1,84 @@
+<!doctype html>
+<html ng-app="newCompany">
+<head>
+	<title>New Company</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.16/angular.js"></script>
+	<script type="text/javascript" src="app.js"></script> 
+	<link rel="stylesheet" type="text/css" href="style.css">
+	
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+	<header class="container-fluid">
+		<div class="row">
+			<div class="headerLeft col-md-5">
+				<ul>
+					<!-- <li><img src="#"/></li> -->
+					<li><button type="button" class="btn btn-primary btn-md">Account</button></li>
+					<li><button type="button" class="btn btn-primary btn-md">Deliveries</button></li>
+					<li><button type="button" class="btn btn-primary btn-md">Guides</button></li>
+					<li><button type="button" class="btn btn-primary btn-md">Past Orders</button></li>
+				</ul>
+			</div>
+			<div class="headerRight col-md-6">
+				<form class="form-inline" role="form">
+					<div class="form-group">
+						<label class="sr-only" for="exampleInputEmail2">Email address</label>
+						<input type="email" class="form-control" id="exampleInputEmail2" placeholder="Enter email">
+					</div>
+					<div class="form-group">
+						<label class="sr-only" for="exampleInputPassword2">Password</label>
+						<input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password">
+					</div>
+					<button type="submit" class="btn btn-default">Sign in</button>
+				</form>
+			</div>
+		</div>
+	</header>
+
+	<div class="container-fluid" ng-controller="searchContainer">
+		<div class="row searchHolder">
+			
+				<input type="text" class="col-md-6" placeholder="Text input"/>
+				<button type="submit" class="col-md-2" placeholder="Add">Add Item to Order</button>
+			
+		</div>
+		<div class="row">	
+			<div class="col-md-1">
+				<div class="productHeader">
+					<h4>Name</h4>
+				</div>
+				<div class="productBody" ng-repeat="name in productList">
+					{{name.name}}
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="productHeader">
+					<h4>Description</h4>
+				</div>
+				<div class="productBody" ng-repeat="product in productList">
+					{{product.descript}}
+				</div>
+			</div>
+			<div class="col-md-1">
+				<div class="productHeader">
+					<h4>Price</h4>
+				</div>
+				<div class="productBody" ng-repeat="price in productList">
+					{{price.price}}
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

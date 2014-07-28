@@ -1,0 +1,23 @@
+.title, .tagline{
+	text-align: center;
+}
+
+.title {
+	margin-top: 18%;
+	width: 20%;
+
+}
+
+.tagline {
+	margin: 5%;
+	float: center;
+}
+.body_wrapper {
+	background-image: url(farm_background1.jpg);
+	
+	
+	
+}
+.buttonControl {
+	margin-bottom: 20%;
+}
