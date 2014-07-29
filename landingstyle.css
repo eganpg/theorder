@@ -1,23 +1,22 @@
 .title, .tagline{
 	text-align: center;
 }
-
 .title {
 	margin-top: 18%;
 	width: 20%;
-
 }
-
 .tagline {
 	margin: 5%;
 	float: center;
 }
 .body_wrapper {
-	background-image: url(farm_background1.jpg);
-	
-	
-	
+	background-image: url(farm_background2.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;	
 }
 .buttonControl {
 	margin-bottom: 20%;
+}
+.leftmenu {
+	margin-left: 75%
 }
