@@ -1,6 +1,10 @@
-What are the goals:
+ What are the goals:
 
-Create an online ordering platform which purveyors can provide to restaurants to increase sales and marketshare for specific company facilitate the ordering process
+
+
+
+
+A tactful ordering platform that purveyors provide to restaurants/bars to increase sales and marketshare. for specific company facilitate the ordering process
 
 
 
@@ -15,11 +19,17 @@ What does this need to do:
 		Easy way to update order
 		
 		In one click send & process an order
+
 		Allow restaurant to adequately check in order
+
 		Keep order history
 
+		Digital Invoices
+
 	Purveyor:	
-		Provide business analytics tools to give purveyor insightful tools to grow business client specifically
+		
+
+		Provide business analytics tools to give purveyor insightful tools to grow business client specifically based on orders.
 
 		Way to suggest purchase add on's/limited time items/specials
 
@@ -37,8 +47,19 @@ What does this need to do:
 			App makes it very difficult to order from anyone but Sysco
 
 
+		Foodem:
+			Advantages:
+				Markets to restaurants. Assist restaurants in the ordering process
+			Disadvantages:
+				What incentive do distributors have to sign up
+				Sales technique
 
 
+
+
+
+
+Tactful sourcing platform.
 
 
 

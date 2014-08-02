@@ -1,0 +1,152 @@
+	<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>orderboard</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+    <!-- StyleSheet -->
+    <link rel="stylesheet" type="text/css" href="orderboard.css">
+
+    <!-- Bootstrap -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+    <!-- font link -->
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700,900' rel='stylesheet' type='text/css'>
+
+  </head>
+	<body>
+		<div class="container-fluid header_wrapper">
+			<div class="row">
+				<div class="col-md-4">
+					<img src="west_central_logo.png"/>
+				</div>
+				<!-- Large button group -->
+				<div class="btn-group col-md-8 button_header">
+  				<button class="header_button btn btn-default btn-lg dropdown-toggle" type="button" data-toggle="dropdown">
+    			Guide <span class="caret"></span>
+  				</button>
+  				<ul class="dropdown-menu" role="menu">
+    			...
+  				</ul>
+  				<button class="header_button btn btn-default btn-lg dropdown-toggle" type="button" data-toggle="dropdown">
+    			Delivery <span class="caret"></span>
+  				</button>
+  				<ul class="dropdown-menu" role="menu">
+    			...
+  				</ul>
+  				<button class="header_button btn btn-default btn-lg dropdown-toggle" type="button" data-toggle="dropdown">
+    			Past Order <span class="caret"></span>
+  				</button>
+  				<ul class="dropdown-menu" role="menu">
+    			...
+  				</ul>
+  				<button class="header_button btn btn-default btn-lg dropdown-toggle" type="button" data-toggle="dropdown">
+    			Account Info <span class="caret"></span>
+  				</button>
+  				<ul class="dropdown-menu" role="menu">
+    			...
+  				</ul>
+				</div>
+			</div>
+		</div>
+    <div class="container-fluid body_wrapper">
+      <div class="row">
+        <div class="order_guide  col-md-8">
+          <div class="input-group">
+            <input type="text" class="form-control">
+              <span class="input-group-btn">
+                <button class="btn btn-default" type="button">Go!</button>
+              </span>
+          </div><!-- /input-group -->
+          <div class="sub_header_wrapper">
+            <div class="sub_header col-md-4">
+              Product Name
+            </div>
+            <div class="sub_header col-md-2">
+              Par
+            </div>
+            <div class="sub_header col-md-2">
+              OnHand
+            </div>
+            <div class="sub_header col-md-2">
+              Order Unit
+            </div>
+            <div class="sub_header col-md-2">
+              Add
+            </div>
+          </div>
+          <div class="items">
+            <div class="product_name col-md-4">
+              Fennel
+            </div>
+            <div class="product_par col-md-2">
+            </div>
+            <div class="product_par col-md-2">
+              3 Ea
+            </div>
+            <div class="product_par col-md-2">
+              2 Ea
+            </div>
+            <div class="product_par col-md-2">
+              <input type="checkbox"></input>
+            </div>
+          </div>
+        </div>
+        <div class="add_item col-md-4">
+          <div class="input-group">
+            <input type="text" class="form-control">
+              <span class="input-group-btn">
+                <button class="btn btn-default" type="button">Go!</button>
+              </span>
+          </div><!-- /input-group -->
+          <div class="sub_header_wrapper">
+            <div class="sub_header col-md-6">
+              Product Name
+            </div>
+            <div class="sub_header col-md-2">
+              Price
+            </div>
+            <div class="sub_header col-md-2">Cs/Brk
+            </div>
+            <div class="sub_header col-md-2">
+              Add
+            </div>
+          </div>
+          <div class="items">
+            <div class="product_name col-md-6">
+              Beans
+            </div>
+            <div class="product_price col-md-2">
+              $5.00
+            </div>
+            <div class="product_csbrk col-md-2">
+              1/1
+            </div>
+            <div class="product_add col-md-2">
+              <input type="checkbox"></input>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="row">
+        <button type="button" class="footer_button btn btn-default">Delivery Date/Confirmation</button>
+      </div>
+      <div class="row">
+        <button type="button" class="footer_button btn btn-default">Push to Master Order Board</button>
+      </div>
+    </div>
+
+  </body>
+</html>

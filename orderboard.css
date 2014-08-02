@@ -1,0 +1,22 @@
+.footer_button {
+	width: 100%;
+}
+
+.header_button {
+	width:25%;
+	margin-top: 3%;
+}
+
+.footer {
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+}
+
+.sub_header {
+	border: solid;
+	border-width: 1px;
+}
+.sub_header_wrapper {
+	margin: 1%;
+}
