@@ -1,10 +1,12 @@
 .footer_button {
 	width: 100%;
+	margin: 1px;
+color: red;
 }
 
 .header_button {
 	width:25%;
-	margin-top: 3%;
+	margin-top: 4%;
 }
 
 .footer {
@@ -18,5 +20,12 @@
 	border-width: 1px;
 }
 .sub_header_wrapper {
-	margin: 1%;
+	margin: 3px;
+}
+.title_logo {
+	font-size: 60px;
+	text-align: center;
+}
+.sub_item {
+	text-align: center;
 }

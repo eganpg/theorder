@@ -1,11 +1,15 @@
 	<!doctype html>
-<html>
+<html ng-app="orderboard">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- angular -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.16/angular.js"></script>
     <title>orderboard</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+    <script type="text/javascript" src="orderboard.js"></script>
 
     <!-- StyleSheet -->
     <link rel="stylesheet" type="text/css" href="orderboard.css">
@@ -22,13 +26,13 @@
 
     <!-- font link -->
     <link href='http://fonts.googleapis.com/css?family=Lato:400,700,900' rel='stylesheet' type='text/css'>
-
+    
   </head>
-	<body>
+	<body ng-model="anything">
 		<div class="container-fluid header_wrapper">
 			<div class="row">
 				<div class="col-md-4">
-					<img src="west_central_logo.png"/>
+					<h1 class="title_logo">orderboard.io</h1>
 				</div>
 				<!-- Large button group -->
 				<div class="btn-group col-md-8 button_header">
@@ -61,7 +65,7 @@
 		</div>
     <div class="container-fluid body_wrapper">
       <div class="row">
-        <div class="order_guide  col-md-8">
+        <div class="order_guide  col-md-8" ng-controller="orderguide">
           <div class="input-group">
             <input type="text" class="form-control">
               <span class="input-group-btn">
@@ -86,18 +90,19 @@
             </div>
           </div>
           <div class="items">
-            <div class="product_name col-md-4">
-              Fennel
+            <div class="sub_product col-md-4">
+              <div ng-repeat="p in product" >{{p.name}}</div>
             </div>
-            <div class="product_par col-md-2">
+            <div class="sub_item col-md-2">
+              5 ea
             </div>
-            <div class="product_par col-md-2">
-              3 Ea
+            <div class="sub_item col-md-2">
+              3 ea
             </div>
-            <div class="product_par col-md-2">
-              2 Ea
+            <div class="sub_item col-md-2">
+              2 ea
             </div>
-            <div class="product_par col-md-2">
+            <div class="sub_item col-md-2">
               <input type="checkbox"></input>
             </div>
           </div>
@@ -123,16 +128,16 @@
             </div>
           </div>
           <div class="items">
-            <div class="product_name col-md-6">
+            <div class="sub_product col-md-6">
               Beans
             </div>
-            <div class="product_price col-md-2">
+            <div class="sub_item col-md-2">
               $5.00
             </div>
-            <div class="product_csbrk col-md-2">
+            <div class="sub_item col-md-2">
               1/1
             </div>
-            <div class="product_add col-md-2">
+            <div class="sub_item col-md-2">
               <input type="checkbox"></input>
             </div>
           </div>
