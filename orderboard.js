@@ -10,7 +10,13 @@ $scope.product = [
 						{name: 'Parsley'},
 						{name: 'Beans'},
 						{name: 'Beans'},
-						{name: 'Beans'}
+						{name: 'Beans'},
+						{name: 'Parsley'},
+						{name: 'Parsley'},
+						{name: 'Parsley'},
+						{name: 'Parsley'},
+						{name: 'Parsley'}
+
 						
 ]
 });
