@@ -9,3 +9,21 @@ logins = Login.create([{firstName: 'Peter', lastName: 'Egan', email: 'eganpg@gma
 												{firstName: 'Alden', lastName: 'Egan', email: 'alden_egan@yahoo.com'},
 												{firstName: 'Luke', lastName: 'Egan', email: 'trishegan5@hotmail.com'}
 				])
+
+products = Product.create([
+	{name: 'Baby Fennel', price: '$5.00', description: 'Weiser Farms', picture: "", unit: 'cs'},
+	{name: 'Baby Artichoke', price: '$5.00', description: 'Weiser Farms', picture: "", unit: 'cs'},
+	{name: 'Celery', price: '$5.00', description: 'Weiser Farms', picture: "", unit: 'cs'},
+	{name: 'Plugra', price: '$5.00', description: 'Weiser Farms', picture: "", unit: 'cs'},
+	{name: 'Apple Cider', price: '$5.00', description: 'Weiser Farms', picture: "", unit: 'cs'},
+	{name: 'Beets', price: '$5.00', description: 'Weiser Farms', picture: "", unit: 'cs'},
+	{name: 'Whole Milk', price: '$5.00', description: 'Weiser Farms', picture: "", unit: 'cs'},
+	{name: 'Buttermilk', price: '$5.00', description: 'Weiser Farms', picture: "", unit: 'cs'},
+	{name: 'AP Flour', price: '$5.00', description: 'Weiser Farms', picture: "", unit: 'cs'},
+	{name: 'Cayenne', price: '$5.00', description: 'Weiser Farms', picture: "", unit: 'cs'},
+	{name: 'Semolina Flour', price: '$5.00', description: 'Weiser Farms', picture: "", unit: 'cs'},
+	{name: 'Buckwheat Flour', price: '$5.00', description: 'Weiser Farms', picture: "", unit: 'cs'},
+	{name: 'Petite Hearts on Fire', price: '$5.00', description: 'Weiser Farms', picture: "", unit: 'cs'},
+	{name: 'Oregano', price: '$5.00', description: 'Weiser Farms', picture: "", unit: 'cs'}
+
+	])

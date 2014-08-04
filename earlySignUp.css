@@ -1,0 +1,11 @@
+.body_wrapper {
+	background: rgba(21,181,139,0.9);
+	background-size: cover;	
+	color: white;
+	height: 800px;
+
+}
+
+.emailInput {
+	margin-bottom: 25%;
+}

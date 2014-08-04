@@ -6,16 +6,17 @@
 	width: 20%;
 }*/
 .tagline {
-	margin: 5%;
+	margin: 0%;
 	float: center;
 }
 .body_wrapper {
-	background-image: url(farm_background2.jpg);
+	background: rgba(21,181,139,0.9);
 	background-size: cover;	
 	color: white;
 
 }
 .buttonControl {
+	margin-top: 3%;
 	margin-bottom: 20%;
 }
 .usernameBar {

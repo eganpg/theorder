@@ -4,7 +4,7 @@ class LoginsController < ApplicationController
 	end
 
 	def show
-		@login = Login.find
+		@login = Login.find(params[:id])
 	end
 
 	def new
@@ -21,11 +21,11 @@ class LoginsController < ApplicationController
 	end
 
 	def edit 
-		@login = Beer.find(params[:id])
+		@login = Login.find(params[:id])
 	end
 
 	def update
-		@login = Beer.find(params[:id])
+		@login = Login.find(params[:id])
 		if @login.update_attributes(params.require(:login).permit(:firstName, :lastName, :email))
 			redirect_to logins_path
 		else

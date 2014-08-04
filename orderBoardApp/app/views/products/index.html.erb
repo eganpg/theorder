@@ -1,0 +1,157 @@
+<!doctype html>
+<html ng-app="orderboard">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- angular -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.16/angular.js"></script>
+    <title>orderboard</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+    <script type="text/javascript" src="orderboard.js"></script>
+
+    <!-- StyleSheet -->
+    <link rel="stylesheet" type="text/css" href="orderboard.css">
+
+    <!-- Bootstrap -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+    <!-- font link -->
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700,900' rel='stylesheet' type='text/css'>
+    
+  </head>
+  <body ng-model="anything" class="background">
+    <div class="container-fluid header_wrapper">
+      <div class="row">
+        <div class="col-md-4">
+          <h1 class="title_logo">orderboard.io</h1>
+        </div>
+        <!-- Large button group -->
+        <div class="btn-group col-md-8 button_header">
+          <button class="header_button btn btn-default btn-lg dropdown-toggle" type="button" data-toggle="dropdown">
+          Guide <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" role="menu">
+           <a href="main_orderboard.html"><li>LA Specialty</li></a>
+          </ul>
+          <button class="header_button btn btn-default btn-lg dropdown-toggle" type="button" data-toggle="dropdown">
+          Delivery <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" role="menu">
+          ...
+          </ul>
+          <button class="header_button btn btn-default btn-lg dropdown-toggle" type="button" data-toggle="dropdown">
+          Past Order <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" role="menu">
+          ...
+          </ul>
+          <button class="header_button btn btn-default btn-lg dropdown-toggle" type="button" data-toggle="dropdown">
+          Account Info <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" role="menu">
+          ...
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid body_wrapper" ng-controller="orderguide">
+      <div class="row">
+        <div class="order_guide  col-md-8" >
+          <div class="input-group">
+            <input type="text" class="form-control">
+              <span class="input-group-btn">
+                <button class="btn btn-default" type="button">Go!</button>
+              </span>
+          </div><!-- /input-group -->
+          <div class="sub_header_wrapper">
+            <div class="sub_header col-md-4">
+              <div><h4>Product</h4>
+              </div>
+              <div ng-repeat="p in product">{{p.name}}
+              </div>
+            </div>
+            <div class="sub_header col-md-2">
+              <div><h4>Par</h4></div>
+              <div ng-repeat="p in product"class="sub_item">{{p.par}}</div>
+            </div>
+            <div class="sub_header col-md-2">
+              <div><h4>OnHand</h4></div>
+              <div ng-repeat="p in product"class="sub_item">{{p.onhand}}</div>
+            </div>
+            <div class="sub_header col-md-2">
+              <div><h4>Order Unit</h4></div>
+              <div ng-repeat="p in product"class="sub_item">{{p.unit}}</div>
+            </div>
+            <div class="sub_header col-md-2">
+              <div><h4>Add</h4>
+              </div>
+              <div class="sub_item col-md-2">
+              <input ng-repeat="p in product" type="checkbox"></input>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="add_item col-md-4">
+          <div class="input-group">
+            <input type="text" class="form-control">
+              <span class="input-group-btn">
+                <button class="btn btn-default" type="button">Go!</button>
+              </span>
+          </div><!-- /input-group -->
+        
+          <% @product.each do |l| %>
+          <div class="sub_header_wrapper">
+            <div class="sub_header col-md-6">
+              <div><h4>Product</h4></div>
+              <div class="sub_product col-md-6">
+              <div><%= l.name %></div>
+              </div>
+            </div>
+            <div class="sub_header col-md-2">
+              <div><h4>Price</h4></div>
+              <div class="sub_item col-md-2">
+              <div><%= l.description %></div>
+              </div>
+            </div>
+            <div class="sub_header col-md-2">
+              <div><h4>Cs/Brk</h4></div>
+              <div class="sub_item col-md-2">
+              <div><%= l.unit %></div>
+              </div>
+            </div>
+            <div class="sub_header col-md-2">
+              <div><h4>Add</h4></div>
+              <div class="sub_item col-md-2">
+              <input ng-repeat="p in product" type="checkbox"></input>
+            </div>
+          </div>
+          <% end %>
+          <div class="items">
+            
+            
+            
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="row">
+        <button type="button" class="footer_button btn btn-default">Delivery Date/Confirmation</button>
+      </div>
+      <div class="row">
+        <a href="main_orderboard.html"><button type="button" class="footer_button btn btn-default">Push to Master Order Board</button></a>
+      </div>
+    </div>
+
+  </body>
+</html>   
