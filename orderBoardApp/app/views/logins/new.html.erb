@@ -1,0 +1,7 @@
+<% form_for @bean do |l| %>
+	First Name: <%= l.text_field :firstName %>
+	Last Name: <%= l.text_field :lastName %>
+	Email: <%= l.text_field :lastName %>
+	<% end %>
+
+	<%= link_to "Back to the List", logins_path

@@ -20,9 +20,10 @@ color: red;
 .sub_header {
 	border: solid;
 	border-width: 1px;
+	background: white;
 }
 .sub_header_wrapper {
-	margin: 3px;
+	margin: 1% 0 0 0;
 }
 .title_logo {
 	font-size: 60px;
@@ -30,4 +31,14 @@ color: red;
 }
 .sub_item {
 	text-align: center;
+	background: white;
+	border-width: 1px;
+}
+.sub_product {
+	background: white;
+	margin: 0.5% 0px 0px 3px;
+}
+.background {
+	background: rgba(0,0,54,0.7);
+	color: black;
 }
