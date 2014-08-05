@@ -6,4 +6,6 @@ class Mainorderboard
   field :email, type: String
   field :ordernumber, type: String
   field :date, type: String
+  has_many :suborders
+  belongs_to :customer
 end

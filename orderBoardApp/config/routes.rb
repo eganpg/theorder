@@ -1,5 +1,14 @@
 Rails.application.routes.draw do
- 
+  resources :customers do
+    resources :mainorderboards  
+  end
+
+  
+
+  resources :logins
+  
+  resources :products
+  
 
   get 'suborders/new' => 'suborders#new'
 
@@ -17,10 +26,7 @@ Rails.application.routes.draw do
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
-  resources :logins
-  resources :mainorderboards
-  resources :products
-  resources :customers
+  
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 

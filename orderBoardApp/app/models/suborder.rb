@@ -4,4 +4,6 @@ class Suborder
   field :par, type: String
   field :onhand, type: String
   field :include, type: String
+  belongs_to :mainorderboard
+  has_many :products
 end

@@ -1,9 +1,10 @@
-<% @customer.each do |l| %>
+<% @customers.each do |l| %>
 	<p><%= l.name %>
 	<%= l.address %>
 	<%= l.email %>
 	<%= l.phone %>
-	<%= link_to 'Create Order', mainorderboards_path %>
+	<%= link_to 'Create Order', customer_mainorderboards_path(l.id) %>
+	
 </p>
 	<% end %>
 

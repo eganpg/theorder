@@ -3,13 +3,17 @@
 	margin: 1px;
 color: red;
 }
-.header_wrapper {
+.navbar-default .navigation {
+	background: rgba(238,98,59,1);
+	box-shadow: 0;
 	
 }
 .header_button {
 	width:25%;
 	margin-top: 4%;
 }
+
+body { padding-bottom: 70px; }
 
 .footer {
 	width: 100%;
@@ -21,6 +25,8 @@ color: red;
 	border: solid;
 	border-width: 1px;
 	background: white;
+	opacity: 0.85;
+	border-radius: 5px;
 }
 .sub_header_wrapper {
 	margin: 1% 0 0 0;

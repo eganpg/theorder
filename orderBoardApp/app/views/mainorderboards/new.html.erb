@@ -1,5 +1,5 @@
 <h1>Check it out</h1>
-<%= form_for @mainorderboard do |l| %>
+<%= form_for [@customer, @mainorderboard] do |l| %>
 	Distributor Name: <%= l.text_field :name %>
   Salesman Name: <%= l.text_field :salesman %>
 	Email: <%= l.text_field :email %>
