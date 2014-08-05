@@ -1,20 +1,38 @@
 Rails.application.routes.draw do
+ 
+
+  get 'suborders/new' => 'suborders#new'
+
+  get 'suborders' => 'suborders#index'
+
+  get 'suborders/show'
+
+  get 'suborders/create'
+
+  get 'suborders/edit'
+
+  get 'suborders/update'
+
+  get 'suborders/destroy'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
   resources :logins
+  resources :mainorderboards
+  resources :products
+  resources :customers
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
   get 'logins' => 'logins#index'
-
   get 'logins/new' => 'logins#new'
 
-  get 'logins/show' => 'logins#show'
 
-
-
+  get 'customers' => 'customers#index'
+  get 'customers/new' => 'customers#new'
+  post 'customers/' => 'customers#create'
 
 
 
@@ -23,7 +41,17 @@ Rails.application.routes.draw do
 
   get 'products/new' => 'products#new'
 
-  get 'products/show' => 'products#show'
+
+
+
+  get 'mainorderboards' => 'mainorderboards#index'
+
+  get 'mainorderboards/new' => 'mainorderboards#new'
+
+
+  get 'mainorderboards/destroy' => 'mainorderboards#destroy'
+
+
 
   
   # Example of named route that can be invoked with purchase_url(id: product.id)

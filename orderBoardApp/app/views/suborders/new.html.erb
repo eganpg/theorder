@@ -1,0 +1,8 @@
+<h1>Suborder</h1>
+<%= form_for @suborder do |l| %>
+	Product Name: <%= l.text_field :productname %>
+  Par Level: <%= l.text_field :par %>
+	Amount on Hand: <%= l.text_field :onhand %>
+	Order Amount: <%= l.text_field :onhand %>
+	Include in Order: <%= l.submit "Add" %>
+	<% end %>

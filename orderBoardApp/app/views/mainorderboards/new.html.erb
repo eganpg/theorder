@@ -1,0 +1,8 @@
+<h1>Check it out</h1>
+<%= form_for @mainorderboard do |l| %>
+	Distributor Name: <%= l.text_field :name %>
+  Salesman Name: <%= l.text_field :salesman %>
+	Email: <%= l.text_field :email %>
+	Phone: <%= l.text_field :phone %>
+	Add: <%= l.submit "Add" %>
+	<% end %>
