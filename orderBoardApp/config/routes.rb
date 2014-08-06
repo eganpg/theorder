@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
-  resources :customers do
-    resources :mainorderboards  
+  resources :logins do
+    resources :mainorderboards do
+      resources :suborders
+      end 
   end
 
  resource :session, only: [:new, :create, :destroy]
@@ -13,19 +15,7 @@ Rails.application.routes.draw do
   resources :products
   
 
-  get 'suborders/new' => 'suborders#new'
-
-  get 'suborders' => 'suborders#index'
-
-  get 'suborders/show'
-
-  get 'suborders/create'
-
-  get 'suborders/edit'
-
-  get 'suborders/update'
-
-  get 'suborders/destroy'
+  
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -39,26 +29,8 @@ Rails.application.routes.draw do
   get 'logins/new' => 'logins#new'
 
 
-  get 'customers' => 'customers#index'
-  get 'customers/new' => 'customers#new'
-  post 'customers/' => 'customers#create'
+  
 
-
-
-
-  get 'products' => 'products#index'
-
-  get 'products/new' => 'products#new'
-
-
-
-
-  get 'mainorderboards' => 'mainorderboards#index'
-
-  get 'mainorderboards/new' => 'mainorderboards#new'
-
-
-  get 'mainorderboards/destroy' => 'mainorderboards#destroy'
 
 
 

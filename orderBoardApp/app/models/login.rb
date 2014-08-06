@@ -9,4 +9,6 @@ class Login
   field :password_digest, type: String
 
   has_secure_password
+
+  has_many :mainorderboards
 end

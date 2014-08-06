@@ -15,7 +15,15 @@ class SessionsController < ApplicationController
 			#store as a cookie in the users browser the id of them
 			#indicating that they are logged in
 			session[:login_id] = u.id.to_s
-			redirect_to logins_path
+			@current_login = u
+			@mainorderboard = Mainorderboard.where(:login_id => @current_login.id).first
+
+			if @maidorderboard != nil
+				puts 'help'
+				redirect_to login_mainorderboard_path(@current_login.id, @mainorderboard.id)
+			else
+				redirect_to new_login_mainorderboard_path(@current_login)
+			end
 		else
 
 			# go back to the login page

@@ -7,5 +7,5 @@ class Mainorderboard
   field :ordernumber, type: String
   field :date, type: String
   has_many :suborders
-  belongs_to :customer
+  belongs_to :login
 end

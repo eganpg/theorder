@@ -1,8 +1,9 @@
 <% @suborder.each do |l| %>
-<h2><%= l.productname %></h2>
-<h2><%= l.par %></h2>
-<h2><%= l.onhand %></h2>
-<h2><%= l.include %></h2>
-<% end %>
-<h2><%= link_to 'Begin New Orderboard', suborders_new_path %></h2>
-<h2><%= link_to 'Delete Vendor', suborders_destroy_path %></h2>
+	<p><%= l.vendorname %>
+	
+	<%= l.email %>
+	
+	
+	
+</p>
+	<% end %>

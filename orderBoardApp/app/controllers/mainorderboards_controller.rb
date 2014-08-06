@@ -1,16 +1,19 @@
 class MainorderboardsController < ApplicationController
 	def index
-		@mainorderboard = Mainorderboard.where(:login_id => @login.id)
 		
-		
+		@mainorderboard = Mainorderboard.all
 	end
 
+	def show
+		@mainorderboard = Mainorderboard.find(params[:id])
+		@login = Login.find(params[:login_id])
+	end
 
-
+	
 	def new
 		@login = Login.find(params[:login_id])
 		@mainorderboard = Mainorderboard.new
-		puts 'test'
+		
 	end
 
 	def create
@@ -18,14 +21,19 @@ class MainorderboardsController < ApplicationController
 		@mainorderboard = Mainorderboard.new(
 			params.require(:mainorderboard).permit(:name, :salesman, :email, :phone)
 			)
-		# Mainorderboard.customer = @customer
 		if @mainorderboard.save
-			redirect_to customer_mainorderboards_path(@login.id)
+			redirect_to login_mainorderboard_path(@login.id, @mainorderboard.id)
 
 		else
 			render 'new'
 		end
 	end
+	
+
+
+
+
+
 	def destroy
 		@mainorderboard = Mainorderboard.find(params[:id])
 		@mainorderboard.destroy

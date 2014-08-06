@@ -1,11 +1,11 @@
 
-        	<%= @customer.name %>
+        	
         	<ul>
-        	<% @mainorderboards.each do |l| %>
+        	<% @mainorderboard.each do |l| %>
           
           <li><b><%= l.name %></b></li>
         
           <% end %>
         </ul>
-          <h2><%= link_to 'Add New Vendor', new_customer_mainorderboard_path(@customer.id) %></h2>
+          <h2><%= link_to 'Add New Vendor', mainorderboards_path(@login_id) %></h2>
           <h2><%= link_to 'Delete Vendor', mainorderboards_destroy_path %></h2>
