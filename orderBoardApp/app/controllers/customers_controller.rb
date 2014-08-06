@@ -2,9 +2,6 @@ class CustomersController < ApplicationController
 		
 		def index
 			@customers = Customer.all
-			puts '******' + @customer.inspect
-			
-
 		end
 
 		def new

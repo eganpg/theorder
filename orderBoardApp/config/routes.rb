@@ -3,7 +3,10 @@ Rails.application.routes.draw do
     resources :mainorderboards  
   end
 
-  
+ resource :session, only: [:new, :create, :destroy]
+
+
+
 
   resources :logins
   

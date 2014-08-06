@@ -1,6 +1,6 @@
 class MainorderboardsController < ApplicationController
 	def index
-		@mainorderboard = Mainorderboard.where(:customer_id => @customer.id)
+		@mainorderboard = Mainorderboard.where(:login_id => @login.id)
 		
 		
 	end
@@ -8,19 +8,19 @@ class MainorderboardsController < ApplicationController
 
 
 	def new
-		@customer = Customer.find(params[:customer_id])
+		@login = Login.find(params[:login_id])
 		@mainorderboard = Mainorderboard.new
 		puts 'test'
 	end
 
 	def create
-		@customer = Customer.find(params[:customer_id])
+		@login = Login.find(params[:login_id])
 		@mainorderboard = Mainorderboard.new(
 			params.require(:mainorderboard).permit(:name, :salesman, :email, :phone)
 			)
 		# Mainorderboard.customer = @customer
 		if @mainorderboard.save
-			redirect_to customer_mainorderboards_path(@customer.id)
+			redirect_to customer_mainorderboards_path(@login.id)
 
 		else
 			render 'new'
