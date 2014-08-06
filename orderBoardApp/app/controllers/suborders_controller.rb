@@ -10,7 +10,7 @@ class SubordersController < ApplicationController
     @suborder = Suborder.new
   end
   def new
-    @login = Login.find(params[:login_id])
+    
     @mainorderboard = Mainorderboard.find(params[:mainorderboard_id])
     @suborder = Suborder.new
   end
@@ -21,7 +21,7 @@ class SubordersController < ApplicationController
       params.require(:suborder).permit(:vendorname, :email)
       )
     if @suborder.save
-      redirect_to login_mainorderboard_suborder_path(@login.id, @mainorderboard.id, @suborder.id)
+      redirect_to mainorderboard_suborder_path(@mainorderboard.id, @suborder.id)
 
     else
       render 'new'

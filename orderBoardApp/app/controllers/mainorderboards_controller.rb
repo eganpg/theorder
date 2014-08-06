@@ -1,4 +1,4 @@
-class MainorderboardsController < ApplicationController
+ class MainorderboardsController < ApplicationController
 	def index
 		
 		@mainorderboard = Mainorderboard.all
@@ -19,7 +19,7 @@ class MainorderboardsController < ApplicationController
 	def create
 		@login = Login.find(params[:login_id])
 		@mainorderboard = Mainorderboard.new(
-			params.require(:mainorderboard).permit(:name, :salesman, :email, :phone)
+			params.require(:mainorderboard).permit(:name)
 			)
 		if @mainorderboard.save
 			redirect_to login_mainorderboard_path(@login.id, @mainorderboard.id)

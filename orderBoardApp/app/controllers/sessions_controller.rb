@@ -19,7 +19,6 @@ class SessionsController < ApplicationController
 			@mainorderboard = Mainorderboard.where(:login_id => @current_login.id).first
 
 			if @maidorderboard != nil
-				puts 'help'
 				redirect_to login_mainorderboard_path(@current_login.id, @mainorderboard.id)
 			else
 				redirect_to new_login_mainorderboard_path(@current_login)

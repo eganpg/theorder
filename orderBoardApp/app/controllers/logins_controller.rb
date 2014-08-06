@@ -14,7 +14,7 @@ class LoginsController < ApplicationController
 	def create
 		@login = Login.new(params.require(:login).permit(:firstName, :lastName, :username, :password, :password_confirmation))
 		if @login.save
-			redirect_to logins_path
+			redirect_to new_session_path
 		else
 			render 'new'
 		end
