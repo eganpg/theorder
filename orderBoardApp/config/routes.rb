@@ -5,14 +5,18 @@ Rails.application.routes.draw do
   resources :mainorderboards do
     resources :suborders
   end
+  resources :suborders do
+    resources :products
+  end
+
  resource :session, only: [:new, :create, :destroy]
 
 
 
-
-  resources :logins
+  #resources :suborders
   
-  resources :products
+  
+  
   
 
   
@@ -25,8 +29,7 @@ Rails.application.routes.draw do
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
-  get 'logins' => 'logins#index'
-  get 'logins/new' => 'logins#new'
+  
 
 
   

@@ -1,27 +1,37 @@
 class SubordersController < ApplicationController
  
   def index
-    @suborder = Suborder.all
+    
+    @mainorderboard = Mainorderboard.where(id: params[:mainorderboard_id]).first
+    @suborders = @mainorderboard.suborders
   end
 
   def show
-    @login = Login.find(params[:login_id])
-    @mainorderboard = Mainorderboard.find(params[:mainorderboard_id])
-    @suborder = Suborder.new
-  end
-  def new
     
+   
     @mainorderboard = Mainorderboard.find(params[:mainorderboard_id])
+    @suborder = Suborder.find(params[:id])
+    
+
+    
+    
+  end
+  
+  def new
+    # @current_user = current_user.mainorderboards
+    @mainorderboard = Mainorderboard.where(id: params[:mainorderboard_id]).first
     @suborder = Suborder.new
   end
+
   def create
-    @login = Login.find(params[:login_id])
-    @mainorderboard = Mainorderboard.find(params[:mainorderboard_id])
-    @suborder = Suborder.new(
+    @mainorderboard = Mainorderboard.where(id: params[:mainorderboard_id]).first
+    @suborder = @mainorderboard.suborders.new(
       params.require(:suborder).permit(:vendorname, :email)
       )
     if @suborder.save
-      redirect_to mainorderboard_suborder_path(@mainorderboard.id, @suborder.id)
+      redirect_to mainorderboard_suborders_path(@mainorderboard.id)
+
+
 
     else
       render 'new'
